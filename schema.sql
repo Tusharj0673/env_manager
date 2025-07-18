@@ -23,3 +23,15 @@ CREATE TABLE `env_info` (
   PRIMARY KEY (`id`),
   UNIQUE KEY `env_name_UNIQUE` (`env_name`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1
+
+-- Insert queries for the database 
+
+-- INSERT INTO `user_info` (`id`, `username`, `email`, `status`, `password`)
+-- VALUES 
+-- (1, 'y', 'y@example.com', 'active', 'helloworld'),
+-- (2, 's', 's@example.com', 'inactive', 'loop');
+
+-- INSERT INTO `env_info` (`id`, `env_name`, `assign_to`, `status`)
+-- VALUES 
+-- (1, 'Dev_Env', 'y', 'assigned', 'Development environment'),
+-- (2, 'QA_Env', 's', 'unassigned', 'QA environment for testing');
