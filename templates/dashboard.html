@@ -42,21 +42,18 @@
             <table class="table table-bordered text-center mt-3">
                 <thead>
                     <tr>
-<<<<<<< HEAD
                         <th>Environment Name</th>
                         <th>Status</th>
                         <th>Checked-out To</th>
                         <th>Comment</th>
                         <th>Time (in hour)</th>
                         <th>Time (Remaining)</th>
-=======
                         <th>Environment</th>
                         <th>Status</th>
                         <th>Assigned To</th>
                         <th>Comment</th>
                         <th>Duration (Hours)</th>
                         <th>Time Left</th>
->>>>>>> 02185a2 (updated)
                         <th>Actions</th>
                     </tr>
                 </thead>
@@ -74,7 +71,6 @@
                         </td>
                         <td>
                             {% if env.status == 'Assigned' %}
-<<<<<<< HEAD
                             {% if env.assign_to == username %}
                             <form method="POST" action="/return/{{ env.env_name }}" style="display:inline;">
                                 <button type="submit" class="btn btn-danger">Release</button>
@@ -84,7 +80,6 @@
                             {% endif %}
                             {% else %}
                             <button onclick="openPopup('{{ env.env_name }}');" class="btn btn-success">Checkout</button>
-=======
                                 {% if env.assign_to == username %}
                                     <form method="POST" action="/return/{{ env.env_name }}" style="display:inline;">
                                         <button type="submit" class="btn btn-danger">Release</button>
@@ -94,7 +89,6 @@
                             {% endif %}
                             {% else %}
                                 <button onclick="openPopup('{{ env.env_name }}');" class="btn btn-success">Checkout</button>
->>>>>>> 02185a2 (updated)
                             {% endif %}
                         </td>
                     </tr>

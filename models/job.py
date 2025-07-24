@@ -1,5 +1,5 @@
 from datetime import datetime, timedelta
-<<<<<<< HEAD
+
 from apscheduler.schedulers.background import BackgroundScheduler
 from sqlalchemy.sql import text
 import os
@@ -24,17 +24,12 @@ from datetime import datetime, timedelta
 from apscheduler.schedulers.background import BackgroundScheduler
 from apscheduler.triggers.interval import IntervalTrigger
 from notify.teams import TeamsNotifier
-
-=======
-
 from apscheduler.schedulers.background import BackgroundScheduler
 from apscheduler.triggers.interval import IntervalTrigger
 from models.env_info_dao import EnvInfo
 from models.user_dao import UserManager
 from notify.teams import TeamsNotifier
 
-
->>>>>>> 02185a2 (updated)
 class EnvJob:
     def __init__(self):
         self.scheduler = None
