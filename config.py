@@ -8,5 +8,9 @@ DB_PASSWORD = os.environ.get('MASTER_PASSWORD')
 DB_HOST = os.environ.get('DB_HOST')
 DB_NAME = 'envtracker'
 
+<<<<<<< HEAD
 SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://' + DB_USERNAME + ':' + DB_PASSWORD + '@' + DB_HOST + DB_NAME
+=======
+SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://' + DB_USERNAME + ':' + DB_PASSWORD + '@' + DB_HOST + '/' + DB_NAME
+>>>>>>> 02185a2 (updated)
 SQLALCHEMY_TRACK_MODIFICATIONS = True

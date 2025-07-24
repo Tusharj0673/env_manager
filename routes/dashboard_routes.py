@@ -11,7 +11,10 @@ def require_login():
 @dashboard_bp.route('/dashboard')
 def dashboard():
     records = EnvInfo.get_dashboard_records()
+<<<<<<< HEAD
     print("Loaded environments:", records)
+=======
+>>>>>>> 02185a2 (updated)
     return render_template('dashboard.html', username=session.get('username'), environments=records)
 
 @dashboard_bp.route('/checkout', methods=['POST'])

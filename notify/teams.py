@@ -1,7 +1,14 @@
 import json
 import os
+<<<<<<< HEAD
 import requests
 
+=======
+
+import requests
+
+
+>>>>>>> 02185a2 (updated)
 class TeamsNotifier:
     @staticmethod
     def env_checked_out(env_name, username, time, comment):

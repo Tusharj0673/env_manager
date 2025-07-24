@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from models.db import db
 from sqlalchemy.sql import text
 import os
@@ -10,6 +11,17 @@ from apscheduler.triggers.interval import IntervalTrigger
 from flask import session
 
 class UserManager(db.Model): # Move this to user dao or rename it.
+=======
+from datetime import datetime
+
+from apscheduler.schedulers.background import BackgroundScheduler
+from apscheduler.triggers.interval import IntervalTrigger
+from flask import session
+from models.db import db
+
+
+class UserManager(db.Model):
+>>>>>>> 02185a2 (updated)
     __tablename__ = 'user_info'
 
     id = db.Column(db.Integer, primary_key=True)
@@ -29,6 +41,7 @@ class UserManager(db.Model): # Move this to user dao or rename it.
             "created_at": self.created_at,
             "updated_at": self.updated_at
         }
+<<<<<<< HEAD
     
     @staticmethod
     def Fetch_seper_class():
@@ -47,6 +60,11 @@ class UserManager(db.Model): # Move this to user dao or rename it.
     @staticmethod
     def update_user_status(username, status):
         EnvInfo=UserManager.Fetch_seper_class()
+=======
+
+    @staticmethod
+    def update_user_status(username, status):
+>>>>>>> 02185a2 (updated)
         try:
             user = UserManager.query.filter_by(username=username).first()
             if user:
@@ -59,7 +77,10 @@ class UserManager(db.Model): # Move this to user dao or rename it.
 
     @staticmethod
     def authenticate_user(username, password):
+<<<<<<< HEAD
         EnvInfo=UserManager.Fetch_seper_class()
+=======
+>>>>>>> 02185a2 (updated)
         try:
          return UserManager.query.filter_by(username=username, password=password).first()
         except Exception as e:

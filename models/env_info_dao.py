@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from datetime import datetime, timedelta
 from apscheduler.schedulers.background import BackgroundScheduler
 from sqlalchemy.sql import text
@@ -17,10 +18,27 @@ from sqlalchemy import text
 from apscheduler.schedulers.background import BackgroundScheduler
 from apscheduler.triggers.interval import IntervalTrigger
 from sqlalchemy import text
+=======
+from apscheduler.schedulers.background import BackgroundScheduler
+from datetime import datetime
+
+from apscheduler.schedulers.background import BackgroundScheduler
+from apscheduler.schedulers.background import BackgroundScheduler
+from apscheduler.schedulers.background import BackgroundScheduler
+from apscheduler.triggers.interval import IntervalTrigger
+from apscheduler.triggers.interval import IntervalTrigger
+from flask import flash
+from models.db import db
+from models.user_dao import UserManager
+>>>>>>> 02185a2 (updated)
 from notify.teams import TeamsNotifier
 
 ASSIGNED_STATUS = 'Assigned'
 UNASSIGNED_STATUS = 'Unassigned'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 02185a2 (updated)
 class EnvInfo(db.Model):
     __tablename__ = 'env_info'
 
@@ -51,8 +69,13 @@ class EnvInfo(db.Model):
     
     @classmethod
     def get_dashboard_records(cls):
+<<<<<<< HEAD
      return [record.to_dict() for record in cls.query.all()]
     
+=======
+        return [ {k: v for k, v in record.to_dict().items() if v is not None} for record in cls.query.all() ]
+
+>>>>>>> 02185a2 (updated)
     @staticmethod
     def update_env_status(env_name, username, time, comment, status=ASSIGNED_STATUS):
      env = EnvInfo.query.filter_by(env_name=env_name).first()

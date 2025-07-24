@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from flask import Flask, session, redirect, url_for
 from models.db import db
 from routes import main_bp, dashboard_bp
@@ -9,6 +10,19 @@ from datetime import datetime, timedelta
 from models.job import EnvJob
 from apscheduler.schedulers.background import BackgroundScheduler
 from apscheduler.triggers.interval import IntervalTrigger
+=======
+from datetime import timedelta
+
+import config
+from apscheduler.schedulers.background import BackgroundScheduler
+from apscheduler.triggers.interval import IntervalTrigger
+from flask import Flask
+from models.db import db
+from models.env_info_dao import EnvInfo
+from models.job import EnvJob
+from models.user_dao import UserManager
+from routes import main_bp, dashboard_bp
+>>>>>>> 02185a2 (updated)
 
 # Initialize the Flask app
 app = Flask(__name__, static_folder='static')
@@ -38,4 +52,7 @@ def before_request():
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=8080)
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 02185a2 (updated)

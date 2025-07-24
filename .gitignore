@@ -208,4 +208,9 @@ __marimo__/
 
 *.iml
 .vscode/**
+<<<<<<< HEAD
 .env
+=======
+.env
+.idea
+>>>>>>> 02185a2 (updated)
