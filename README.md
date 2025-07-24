@@ -1,18 +1,3 @@
-# env_manager
-Allow teams to checkout or release environment testing purposes
-
-<<<<<<< HEAD
-Setup
-# Run the command in your terminal "pip install requirements.txt"
-# Create a database "envtracker"
-# Run the schema.sql file
-# Create a .env file and pass parameters like shown below
-# MASTER_USER = "root"
-# MASTER_PASSWORD = "root" 
-# DB_HOST = "localhost:3307/"
-# Run the command "python app.py"
-
-=======
 # Setup
 1. Install dependencies
 ```bash
@@ -30,6 +15,6 @@ DB_HOST = "localhost:3306/"
 ```bash
    python app.py
 ```
->>>>>>> 02185a2 (updated)
+
 
 
